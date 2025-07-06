@@ -29,7 +29,12 @@ function runTimer(){
         }
         else{
             clearInterval(timerInt)
-            document.querySelector("#panelbottom").innerHTML = "<h1>Game Over</h1>"
+            document.querySelector("#panelbottom").innerHTML = "<h1>Click Anywhere to replay</h1>"
+            
+            document.body.addEventListener("click", function reloadPage() {
+                location.reload();
+            }, { once: true });
+
         }    
     }, 1000)
 
